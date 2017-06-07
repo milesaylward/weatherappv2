@@ -18,7 +18,7 @@ export const TextChange = (text) => {
 
 export const Search = (value) => {
   return (dispatch) => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://api.apixu.com/v1/forecast.json?key=${key}&q=${value}&days=5`)
+    axios.get(`https://cors-anywhere.herokuapp.com/api.apixu.com/v1/forecast.json?key=${key}&q=${value}&days=5`)
       .then(res => {
         dispatch({ type: SEARCH_SUBMIT, payload: res.data })
       })
